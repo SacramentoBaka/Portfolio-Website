@@ -359,6 +359,7 @@ span {
     height: 220px;
     filter: brightness(.5);
     transition: .5s;
+    flex-shrink: 0;
 }
 .thumbnail .item img {
     width: 100%;
@@ -372,4 +373,15 @@ span {
 .thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
+}
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+    .arrows {
+        top: 10%;
+    }
 }
