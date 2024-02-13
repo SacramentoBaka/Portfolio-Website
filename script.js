@@ -34,6 +34,12 @@ function showSlider(){
     // Active new item
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
+
+    //Clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() =>{
+        next.click();
+    }, 5000)
 }
 //EventHandling, prev click button.
 prev.onclick = function() {
@@ -50,4 +56,7 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     });
 });
-//Handling Auto Run
+//Handling Auto Run on slider
+let refreshInterval = setInterval(() =>{
+    next.click();
+}, 5000)
