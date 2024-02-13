@@ -43,3 +43,11 @@ prev.onclick = function() {
     }
     showSlider();
 }
+//Handling the background picture from the thumnails
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    });
+});
+//Handling Auto Run
