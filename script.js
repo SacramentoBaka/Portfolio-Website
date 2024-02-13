@@ -16,7 +16,7 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 let countItem = items.length;
 let itemActive = 0;
 
-// EventHandling, next click
+// EventHandling, next click button.
 next.onclick = function() {
     itemActive += 1;
     if(itemActive >= countItem){
@@ -34,4 +34,12 @@ function showSlider(){
     // Active new item
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
+}
+//EventHandling, prev click button.
+prev.onclick = function() {
+    itemActive -= 1;
+    if(itemActive < 0) {
+        itemActive = countItem - 1;
+    }
+    showSlider();
 }
