@@ -387,14 +387,15 @@ span {
 }
 .portfolio {
     padding-bottom: 10rem;
+    height: 100vh;
 }
 .portfolio h2 {
-    margin-bottom: 4rem;
+    padding-top: 5%;
 }
 .portfolio .portfolio-container {
     display: flex;
     align-items: center;
-    padding: 10rem 7% 2rem;
+    padding: 2rem 7% 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -423,7 +424,7 @@ span {
     background: linear-gradient(to top, #000 40%, transparent);
     color: white;
     display: flex;
-    justify-content:end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
