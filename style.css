@@ -55,7 +55,7 @@ body {
 .navbar a {
     position: relative;
     font-size: 1.7rem;
-    color: var(--text-color);
+    color: #d4ff27;
     font-weight: 500; 
     margin-left: 3.5rem;
 }
@@ -219,7 +219,45 @@ section {
 span {
     color: var(--main-color);
 }
-
+.about {
+    display: flex;
+    align-items: center;
+    padding: 10rem 7% 2rem;
+    width: 100%;
+    justify-content: center;
+    background-color: #2b2a2f;
+}
+.about .about-container {
+    width: 100%;
+    padding: 50px 8%;
+}
+.about .about-container .about-contents {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+}
+.about-contents .image-section {
+    position: relative;
+    min-height: 300px;
+    height: 380px;
+}
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+.about-contents .image-section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: 3px solid var(--gradient-color);
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
 
 /*  CSS Slider  */
 
