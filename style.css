@@ -13,7 +13,7 @@
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: green;
+    --main-color: #383e42;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
     --gradient-color: #ff3527;
@@ -45,7 +45,7 @@ body {
 }
 .logo {
     font-size: 2.5rem;
-    color: #d4ff27;
+    color: #d8eef2;
     font-weight: 600;
     cursor: default;
 }
@@ -55,7 +55,7 @@ body {
 .navbar a {
     position: relative;
     font-size: 1.7rem;
-    color: #d4ff27;
+    color: #d8eef2;
     font-weight: 500; 
     margin-left: 3.5rem;
 }
@@ -95,6 +95,20 @@ section {
     display: flex;
     align-items: center;
     padding: 10rem 7% 2rem;
+    height: 100vh;
+    width: 100%;
+    background: #1e2124;
+}
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 .home .home-content {
     max-width: 44rem;
@@ -103,6 +117,7 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: .3;
+    color: white;
 }
 .home-content h1 {
     margin-top: 2.6rem;
@@ -113,6 +128,7 @@ section {
 }
 .home-content p {
     font-size: 1.6rem;
+    color: white;
 }
 .home-content .social-media a {
     display: inline-flex;
@@ -125,7 +141,7 @@ section {
     border-radius: 50%;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 2rem;
-    color:  var(--main-color);
+    color:  #7d8991;
     margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
@@ -137,7 +153,7 @@ section {
     display: inline-block;
     padding: 1.2rem 2.8rem;
     background: linear-gradient(to right, #fb5283, #ff3527);
-    border-radius: .6rem;
+    border-radius: 25px;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 1.6rem;
     color: var(--white-color);
@@ -181,7 +197,7 @@ section {
     color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
-    background: var(--bg-color);
+    background: #1e2124;
     padding: 13px 0;
 }
 .home .profession-box .profession::nth-child(1) i {
@@ -193,11 +209,13 @@ section {
 }
 .home .profession i {
     font-size: 3.8rem;
+    color: #7d8991;
 }
 .home .profession h3 {
     font-size: 3.2rem;
     line-height: 1;
     font-weight: 600;
+    color: #7d8991;
 }
 .home .profession-box .circle {
     width: 560px;
@@ -217,7 +235,7 @@ section {
     border-left: 384px solid transparent;
 }
 span {
-    color: var(--main-color);
+    color: #7d8991;
 }
 .about {
     display: flex;
@@ -225,7 +243,7 @@ span {
     padding: 10rem 7% 2rem;
     width: 100%;
     justify-content: center;
-    background-color: #2b2a2f;
+    background: #1e2124;
 }
 .about .about-container {
     width: 100%;
@@ -253,10 +271,68 @@ span {
     position: absolute;
     width: 100%;
     height: 100%;
-    outline: 3px solid var(--gradient-color);
+    outline: 2px solid var(--gradient-color);
     top: 15px;
     left: 15px;
     z-index: 1;
+}
+.info-section p:nth-child(1) {
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: relative;
+    display: inline-block;
+}
+.info-section h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.info-section p:nth-child(3) {
+    color: #7d8991;
+    font-size: 22px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+}
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gradient-color);
+}
+.personal-info div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.personal-info div span {
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+.info-section .button a {
+    min-width: 150px;
+    padding: 8px 18px;
+    border: 2px solid var(--gradient-color);
+    border-radius: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 20px;
+}
+.info-section .button a:hover {
+    background: transparent;
+    color: var(--gradient-color);
+    border-color: var(--gradient-color);
 }
 
 /*  CSS Slider  */
@@ -402,9 +478,19 @@ span {
 .portfolio {
     padding-bottom: 10rem;
     height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,#d2001a , #459ede, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
-.portfolio h2 {
-    padding-top: 5%;
+.portfolio p {
+    margin-top: 5%;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
 }
 .portfolio .portfolio-container {
     display: flex;
@@ -412,7 +498,6 @@ span {
     padding: 2rem 7% 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
     gap: 2.5rem;
 }
 .portfolio-container .portfolio-box {
