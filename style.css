@@ -17,6 +17,7 @@
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
     --gradient-color: #ff3527;
+    --orange-color: #c47a0a;
 }
 html {
     font-size: 62.5%;
@@ -72,7 +73,7 @@ body {
     bottom: -6px;
     width: 100%;
     height: .2rem;
-    background: var(--text-color);
+    background: var(--orange-color);
 }
 .header.sticky .navbar a::before {
     background: var(--main-color);
@@ -97,7 +98,9 @@ section {
     padding: 10rem 7% 2rem;
     height: 100vh;
     width: 100%;
-    background: #1e2124;
+    background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
 @keyframes color {
     0% {
@@ -114,8 +117,8 @@ section {
     max-width: 44rem;
 }
 .home-content h3 {
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 500;
     line-height: .3;
     color: white;
 }
@@ -123,7 +126,7 @@ section {
     margin-top: 2.6rem;
     font-size: 5.6rem;
     font-weight: 700;
-    color: #ff3527;
+    color: var(--orange-color);
     margin-bottom: .3rem;
 }
 .home-content p {
@@ -137,35 +140,38 @@ section {
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: .2rem solid var(--main-color);
+    border: .1rem solid var(--orange-color);
     border-radius: 50%;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 2rem;
-    color:  #7d8991;
+    color:  white;
     margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
 .home-content .social-media a:hover {
-    background-color: var(--main-color);
+    background-color: var(--orange-color);
     color: var(--white-color);
 }
 .btn {
     display: inline-block;
     padding: 1.2rem 2.8rem;
-    background: linear-gradient(to right, #fb5283, #ff3527);
+    background: linear-gradient(45deg, #141414, #828282, #828282, #141414);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
     border-radius: 25px;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 1.6rem;
-    color: var(--white-color);
+    color: var(--main-color);
     letter-spacing: .1rem;
     font-weight: 600;
     border: .2rem solid transparent;
     transition: .5s ease;
 }
 .btn:hover {
-    background: transparent;
-    color: green;
-    border-color: green;
+    background: linear-gradient(45deg, #141414, #828282, #828282, #141414);
+    background-size: 300% 300%;
+    color: var(--white-color);
+    border-color: var(--main-color);
 }
 .home .profession-container {
     position: absolute;
@@ -197,8 +203,10 @@ section {
     color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
-    background: #1e2124;
-    padding: 13px 0;
+    background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    padding: 15px;
 }
 .home .profession-box .profession::nth-child(1) i {
     margin-right: 15px;
@@ -220,7 +228,7 @@ section {
 .home .profession-box .circle {
     width: 560px;
     height: 560px;
-    border: 3px solid var(--main-color);
+    border: 3px solid var(--orange-color);
     border-radius: 50%;
 }
 .home .profession-container .overlay {
@@ -243,7 +251,9 @@ span {
     padding: 10rem 7% 2rem;
     width: 100%;
     justify-content: center;
-    background: #1e2124;
+    background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
 .about .about-container {
     width: 100%;
@@ -271,7 +281,7 @@ span {
     position: absolute;
     width: 100%;
     height: 100%;
-    outline: 2px solid var(--gradient-color);
+    outline: 3px solid var(--main-color);
     top: 15px;
     left: 15px;
     z-index: 1;
@@ -308,7 +318,7 @@ span {
     grid-gap: 10px 20px;
     margin-top: 14px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--gradient-color);
+    border-bottom: 2px solid var(--main-color);
 }
 .personal-info div {
     display: grid;
@@ -321,18 +331,22 @@ span {
 .info-section .button a {
     min-width: 150px;
     padding: 8px 18px;
-    border: 2px solid var(--gradient-color);
+    background: linear-gradient(45deg, #141414, #828282, #828282, #141414);
+    background-size: 300% 300%;
+    border: 2px solid var(--main-color);
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.4s;
     margin-top: 20px;
 }
 .info-section .button a:hover {
-    background: transparent;
-    color: var(--gradient-color);
-    border-color: var(--gradient-color);
+    background: linear-gradient(45deg, #141414, #828282, #828282, #141414);
+    background-size: 300% 300%;
+    color: var(--white-color);
+    font-weight: 500;
+    border-color: var(--main-color);
 }
 
 /*  CSS Slider  */
@@ -376,6 +390,7 @@ span {
 .slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
     letter-spacing: 10px;
+    font-size: 1.5rem;
 }
 .slider .list .item .content h2 {
     font-size: 100px;
@@ -479,7 +494,7 @@ span {
     padding-bottom: 10rem;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg,#d2001a , #459ede, #f48e21, #23d5ab);
+    background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
 }
