@@ -649,9 +649,33 @@ span {
     flex-basis: 35%;
     min-width: 320px;
     margin-right: 60px;
-    background-color: #828282;
 }
 .row section.right {
     flex-basis: 60%;
     background-color: #7d8991;
+}
+section.left .contactTile h2 {
+    position: relative;
+    font-size: 25px;
+    color: #d8eef2;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+section.left .contactTile h2::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: #383e42;
+    top: 120%;
+    left: 0;
+}
+section.left .contactTile h2::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: #828282;
+    top: calc(120% - 1px);
+    left: 0;
 }
