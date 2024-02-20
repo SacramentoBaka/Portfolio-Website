@@ -619,11 +619,39 @@ span {
     color: #333;
 }
 .contact-me {
+    display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10rem 7% 2rem;
-    height: 100vh;
-    width: 100%;
     background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
+}
+.contact-me .container {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 8%;
+}
+.container .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+}
+.row section.col {
+    display: flex;
+    flex-direction: column;
+}
+.row section.left {
+    flex-basis: 35%;
+    min-width: 320px;
+    margin-right: 60px;
+    background-color: #828282;
+}
+.row section.right {
+    flex-basis: 60%;
+    background-color: #7d8991;
 }
