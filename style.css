@@ -718,7 +718,7 @@ section.left .contact-info {
     display: block;
     padding-left: 20px;
     color: #d8eef2;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 16px;
 }
 .icon-group .details span:nth-child(1) {
@@ -753,4 +753,64 @@ section.left .contact-info {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 30px;
+}
+.row section.right .input-group {
+    margin: 18px 0px;
+    position: relative
+}
+.message-form .halfWidth {
+    flex-basis: 48%;
+}
+.message-form .fullWidth {
+    flex-basis: 100%;
+}
+.message-form input, .message-form textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 2px 0px;
+    background-color: transparent;
+    color: #ddd;
+    border: none;
+    border-bottom: 2px solid #7d8991;
+    outline: none;
+}
+.message-form textarea {
+    resize: none;
+    width: 100%;
+    height: 220px;
+    display: block;
+}
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+textarea::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--orange-color);
+    border-radius: 15px;
+}
+.input-group label {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    color: #7d8991;
+    transition: 0.4s;
+    pointer-events: none;
+}
+.input-group:nth-child(4) label {
+    top: 2px;
+
+}
+.input-group input:focus ~ label, .input-group textarea:focus ~ label 
+.input-group input:valid ~ label, .input-group textarea:valid ~ label {
+
+    transform: translateY(-30px);
+    font-size: 12px;
 }
