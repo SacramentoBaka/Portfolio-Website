@@ -652,7 +652,6 @@ span {
 }
 .row section.right {
     flex-basis: 60%;
-    background-color: #7d8991;
 }
 section.left .contactTile h2 {
     position: relative;
@@ -660,6 +659,9 @@ section.left .contactTile h2 {
     color: #d8eef2;
     display: inline-block;
     margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 1.5rem;
 }
 section.left .contactTile h2::before {
     content: '';
@@ -678,4 +680,69 @@ section.left .contactTile h2::after {
     background-color: #828282;
     top: calc(120% - 1px);
     left: 0;
+}
+section.left .contactTile p {
+    font-size: 16px;
+    color: #828282;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding-bottom: 22px;
+}
+section.left .contact-info {
+    margin-bottom: 16px;
+}
+.contact-info .icon-group {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+}
+.icon-group .icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .1rem solid var(--orange-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color:  white;
+    transition: .5s ease;
+}
+.icon-group .icon a:hover {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+.icon-group .details span {
+    display: block;
+    padding-left: 20px;
+    color: #d8eef2;
+    font-size: 16px;
+}
+.icon-group .details span:nth-child(1) {
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 1.5rem;
+}
+.contact-me .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .1rem solid var(--orange-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color:  white;
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.contact-me .social-media a:hover {
+    background-color: var(--orange-color);
+    color: var(--white-color);  
 }
