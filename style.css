@@ -267,7 +267,7 @@ span {
 }
 .about {
     align-items: center;
-    padding: 10rem 7% 2rem;
+    padding: 10rem 2rem;
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -276,13 +276,18 @@ span {
     animation: color 12s ease-in-out infinite;
 }
 .about .about-container {
+    
+    display: flex;
+    align-items: center;
+    padding: 10rem 7% 2rem;
+    height: 100vh;
     width: 100%;
-    padding: 50px 8%;
+    background: linear-gradient(45deg, #0a0a0a, #1e2124, #1e2124, #0a0a0a);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
 .about .about-container .about-contents {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-gap: 70px;
+   
 }
 .about-contents .image-section {
     position: relative;
@@ -305,6 +310,10 @@ span {
     top: 15px;
     left: 15px;
     z-index: 1;
+}
+.about .info-section{
+    padding-left: 10rem;
+    padding-right: 20rem;
 }
 .info-section p:nth-child(1) {
     color: var(--white-color);
@@ -399,7 +408,6 @@ span {
 }
 
 /*  CSS Slider  */
-
 .slider {
     height: 100vh;
     justify-content: center;
